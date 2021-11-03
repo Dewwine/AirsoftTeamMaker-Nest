@@ -7,7 +7,7 @@ interface IRole {
 }
 
 @Table({ tableName: 'roles', timestamps: false })
-export class RolesModel extends Model<RolesModel, IRole> {
+export class RoleModel extends Model<RoleModel, IRole> {
   @Column({
     type: DataType.INTEGER,
     autoIncrement: true,

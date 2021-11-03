@@ -1,11 +1,12 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
-import { RolesModel } from './roles.model';
+import { RoleModel } from './role.model';
 
 @Injectable()
 export class RolesService implements OnModuleInit {
-
-  constructor(@InjectModel(RolesModel) private rolesRepository: typeof RolesModel) {}
+  constructor(
+    @InjectModel(RoleModel) private rolesRepository: typeof RoleModel,
+  ) {}
 
   onModuleInit() {
     this.rolesRepository.create({
